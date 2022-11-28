@@ -25,4 +25,9 @@ class HomeController extends Controller
     public function register(){
         return view('register');
     }
+
+    public function create(){
+        return view('crud.create');
+    }
+
 }

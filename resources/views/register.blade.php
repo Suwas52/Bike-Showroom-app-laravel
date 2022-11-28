@@ -17,14 +17,14 @@
                             </svg>
                         </div>
 
-                        <form action="" method="post">
-                            <!-- @csrf
+                        <form action="{{route('register')}}" method="post">
+                            @csrf
                             @if(Session::has('error'))
                             <p class="text-danger">{{Session:get('error')}}</p>
                             @endif
                             @if (Session::has('success'))
                             <p class="text-success">{{Session::get('success')}}</p>
-                            @endif -->
+                            @endif
 
                             <div class="h1 text-center font-weight-bold " style="color:#23395d; font-weight:bold;">
                                 Register</div>
