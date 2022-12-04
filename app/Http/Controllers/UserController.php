@@ -60,10 +60,14 @@ class UserController extends Controller
 
      
      public function store(Request $request){
+        $image = $request->file('image')->getClientOriginalName();
+        
+        $request->image->move(public_path('images'), $image);
         $crud =new Crud();
         $crud->brand = $request->brand;
         $crud->name = $request->name;
         $crud->price = $request->price;
+        $crud->image = $image;
         $crud->remarks = $request->remarks;
         $crud->save();
 
@@ -84,6 +88,7 @@ class UserController extends Controller
             'brand' => 'required',
             'name' => 'required',
             'price' => 'required',
+            'image' => 'required',
             'remarks' => 'required',
         ]);
 
@@ -93,12 +98,16 @@ class UserController extends Controller
         $brand = $request->brand;
         $name = $request->name;
         $price = $request->price;
+        $image = $request->file('image')->getClientOriginalName();
         $remarks = $request->remarks;
+        
+        
 
         Crud::where('id', '=', $id)->update([
             'brand' => $brand,
             'name' => $name,
             'price' => $price,
+            'image' => $image,
             'remarks' => $remarks,
         ]);
 

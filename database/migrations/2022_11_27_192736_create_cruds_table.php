@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('brand');
             $table->string('name');
             $table->integer('price');
+            $table->string('image');
             $table->text('remarks');
             $table->timestamps();
         });

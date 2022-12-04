@@ -7,7 +7,7 @@
                 <div class="card border-0 shadow">
                     <div class="card-body ">
 
-                        <form action="{{route('store')}}" method="post">
+                        <form action="{{route('store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="card border-0 shadow-lg">
                                 <div class="card-body">
@@ -28,10 +28,16 @@
                                             placeholder="price">
                                     </div>
                                     <div class="mb-3">
+                                        <label for="image" class="form-label">Image</label>
+                                        <input type="file" class="form-control" name="image" id="image" rows="3"
+                                            placeholder="Enter the image"></input>
+                                    </div>
+                                    <div class="mb-3">
                                         <label for="remarks" class="form-label">Remarks</label>
                                         <textarea class="form-control" name="remarks" id="remarks" rows="3"
                                             placeholder="Enter the remarks"></textarea>
                                     </div>
+
 
                                     <div class="mb-3">
                                         <button class="btn btn-success">Submit</button>

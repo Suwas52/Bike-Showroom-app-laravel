@@ -10,6 +10,7 @@
                     <th>Brand</th>
                     <th>Name</th>
                     <th>Price</th>
+                    <th>Bike Image</th>
                     <th>Remarks</th>
                     <th>Action</th>
                 </tr>
@@ -24,6 +25,7 @@
                     <td>{{$items['brand']}}</td>
                     <td>{{$items['name']}}</td>
                     <td>{{$items['price']}}</td>
+                    <td><img src="images/{{$items['image']}}" alt="" style="width: 100px; height:100px;"></td>
                     <td>{{$items['remarks']}}</td>
                     <td>
 

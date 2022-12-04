@@ -7,7 +7,7 @@
                 <div class="card border-0 shadow">
                     <div class="card-body ">
 
-                        <form action="{{url('update')}}" method="post">
+                        <form action="{{url('update')}}" method="post" enctype="multipart/form-data">
                             @csrf
 
                             <div class="card border-0 shadow-lg">
@@ -28,6 +28,11 @@
                                         <label for=" price" class="form-label">Price</label>
                                         <input type="text" name="price" class="form-control" id="price"
                                             placeholder="price" value="{{ $cruds->price}}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="image" class="form-label">Image</label>
+                                        <input type="file" class="form-control" name="image" id="image" rows="3"
+                                            placeholder="Enter the image"></input>
                                     </div>
                                     <div class="mb-3">
                                         <label for="remarks" class="form-label">Remarks</label>
